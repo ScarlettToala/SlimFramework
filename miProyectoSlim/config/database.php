@@ -61,6 +61,7 @@ $db->exec("CREATE TABLE IF NOT EXISTS album (
  // Inserir registres
  $db->exec("INSERT INTO album ('alb_nombre','alb_fecha','alb_artistaId', 'alb_foto') 
  VALUES 
+ 
 ( 'Espresso (Single)', '2024-04-12', 1, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsnworksceo.imgix.net%2Fnjs%2Ff8e21eee-ecc3-4e37-bc87-599a64742660.sized-1000x1000.jpeg%3Fw%3D1000&f=1&nofb=1&ipt=3e304874c00d8fde5433ad11c47e9a959097a7c1b85db96956e0a84f053ba7a0'),
 ( 'Fireworks & Rollerblades', '2024-04-05', 2, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic211%2Fv4%2Fa5%2Fc1%2F9c%2Fa5c19c62-d641-93b4-2800-e74778569f5f%2F093624852483.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=150f848ee783997ec56b346bafa167ca7f34253fa8610f38516bb51c870a240d'),
 ( 'Hit Me Hard and Soft', '2024-05-17', 3, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.discogs.com%2F_jPK58D2xn6RtWkG06TKFUl5a7JkRUnUfVcB5abklUc%2Frs%3Afit%2Fg%3Asm%2Fq%3A90%2Fh%3A530%2Fw%3A600%2FczM6Ly9kaXNjb2dz%2FLWRhdGFiYXNlLWlt%2FYWdlcy9SLTMxNDEz%2FMTI1LTE3MjQwNTIz%2FNDQtMjczOC5qcGVn.jpeg&f=1&nofb=1&ipt=67b64d1c9ea000d430265b9d7c01a636ee21b751135ff9ace3342e6dde988700'),
@@ -68,7 +69,7 @@ $db->exec("CREATE TABLE IF NOT EXISTS album (
 ( 'I''ve Tried Everything But Therapy (Part 1)', '2023-09-15', 6, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.musicmaniarecords.be%2Fmedia%2Fcoverart-big%2F209176-ive-tried-everything-but-therapy-part-1.jpg&f=1&nofb=1&ipt=35a31f451e1987e20e31bdb40156b68d2c814f1c978b9405208f4370f811aefe'),
 ( 'DECIDE', '2022-09-16', 7, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthemontclarion.org%2Fwp-content%2Fuploads%2F2022%2F10%2FIMG_6923.jpg&f=1&nofb=1&ipt=c3f94d9af29f38488f4439bc5f2a2dbc9c0f20f356bbee171649b2ff1324eb35'),
 ( 'Unreal Unearth', '2023-08-18', 8, 'https://m.media-amazon.com/images/I/81VulClq75L.jpg' ),
-( 'The Idol Episode 4 (Music from the HBO Original Series)', '2023-06-23', 8, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic116%2Fv4%2Fdb%2F28%2Fe7%2Fdb28e7c3-f53a-76c8-eaa4-d92a22e4f160%2F23UMGIM72115.rgb.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=b1af7e56394bb21ae2352b524b92913dc37b5a09d23743c53b2509afd620dd7c' ),
+( 'The Idol Episode 4 (Music from the HBO Original Series)', '2023-06-23', 9, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fis1-ssl.mzstatic.com%2Fimage%2Fthumb%2FMusic116%2Fv4%2Fdb%2F28%2Fe7%2Fdb28e7c3-f53a-76c8-eaa4-d92a22e4f160%2F23UMGIM72115.rgb.jpg%2F1200x1200bf-60.jpg&f=1&nofb=1&ipt=b1af7e56394bb21ae2352b524b92913dc37b5a09d23743c53b2509afd620dd7c' ),
 ( 'Lover', '2019-08-23', 12, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fsuave.hn%2Fwp-content%2Fuploads%2F2019%2F08%2FAGAEH-1068x1068.jpg&f=1&nofb=1&ipt=a43d60e1f6db3a2f507c458e8ab9762d8edf2324dec6066e1d57fb9d281202d5'),
 ( 'Die With A Smile (Single)', '2024-02-01', 13, 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.scdn.co%2Fimage%2Fab67616d0000b27335b56028ff1b13347a8aa5b6&f=1&nofb=1&ipt=b5ad3a3c006db044bc4d9da1b67c1c7cdf96408285de85083125d1549873ecfe' ),
 ( 'A Bar Song (Tipsy) (Single)', '2024-03-22', 15 , 'https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/72/1c/92/721c9211-2be5-4614-2ca3-28d55b0b5d88/197342837156_cover.jpg/600x600bf-60.jpg'),
@@ -88,7 +89,11 @@ $db->exec("CREATE TABLE IF NOT EXISTS album (
 ( 'Feather (Single)', '2024-01-05', 1 , 'https://i.discogs.com/4-9gXhNp93J26231vRPihPfsWblbITw4FpYR20wJjLE/rs:fit/g:sm/q:40/h:300/w:300/czM6Ly9kaXNjb2dz/LWRhdGFiYXNlLWlt/YWdlcy9SLTI5MTEw/MDQyLTE3MDI0OTgz/MjctMzU2Ny5qcGVn.jpeg'),
 ( 'Eternal Sunshine', '2024-03-08', 30, 'https://is1-ssl.mzstatic.com/image/thumb/Music122/v4/34/fe/a1/34fea184-6d20-3f50-b4ce-5e1501c1c5ab/24UMGIM00198.rgb.jpg/600x600bf-60.jpg' ),
 ( 'Endless Summer Vacation', '2023-03-10', 31, 'https://images-eu.ssl-images-amazon.com/images/I/519DpQeHU5L._AC_UL210_SR210,210_.jpg'),
-( 'La Vida Es Una', '2023-03-03', 32 , 'https://i.scdn.co/image/ab67616d0000b2730656d5ce813ca3cc4b677e05')");
+( 'La Vida Es Una', '2023-03-03', 32 , 'https://i.scdn.co/image/ab67616d0000b2730656d5ce813ca3cc4b677e05'),
+('SOLO (SIGLE)', '12-06-2018', 10, 'https://i.scdn.co/image/ab67616d0000b27362e6288a5887b95176cca29e'),
+('Lily-Rose Deep(Su EP debut)', '20-07-2021', 11, 'https://cdn-images.dzcdn.net/images/cover/ba51a7916b975521090a846e04313933/1900x1900-000000-80-0-0.jpg');
+");
+
  
 $db->exec("CREATE TABLE IF NOT EXISTS cancion (
     'can_id' INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -164,7 +169,10 @@ $db->exec("CREATE TABLE IF NOT EXISTS cancion (
 -- 28
 ('Vampire',2024, 'Pop', 90000000, 28, 34, 'Olivia Rodrigo lanza un tema emocional y poderoso.', 'https://youtu.be/RlPNh_PBZb4?feature=shared'),
 -- 29
-('Cruel Summer (Taylor''s Version)', 2024, 'Pop', 85000000, 8, 12, 'Taylor Swift lanza una nueva versión de su éxito.', 'https://youtu.be/ic8j13piAhQ?si=evPJKrtfEdJ8J0T9'); ");
+('Cruel Summer (Taylor''s Version)', 2024, 'Pop', 85000000, 8, 12, 'Taylor Swift lanza una nueva versión de su éxito.', 'https://youtu.be/ic8j13piAhQ?si=evPJKrtfEdJ8J0T9'),
+
+('SOLO', 2018, 304000000, 33, 10,' hip-hop', 'Tema de Jennie', 'https://youtu.be/vdDuCvCrcKg?feature=shared')
+; ");
 
 
 // Tancar la connexió
